@@ -280,8 +280,9 @@ View my notebook with detailed steps here:
 
 ### Results:
 
+![image](https://github.com/user-attachments/assets/04ae8862-7b9c-4310-9685-3f99006f3421)
 
-
+![image](https://github.com/user-attachments/assets/dffc9ced-7d39-4fba-8870-6de5439e25fc)
 
 ### Insights:
 +	The analysis of the proportion of homeless individuals by race and region shows that, overall, the distribution among racial groups is quite balanced. However, there are notable exceptions: white individuals are disproportionately represented in the South and Central West regions, while the percentages of black and mixed-race individuals are nearly identical.
@@ -297,8 +298,9 @@ View my notebook with detailed steps here:
 
 ### Results:
 
+![image](https://github.com/user-attachments/assets/0edbe492-5410-46ce-87e0-6d503063f2c9)
 
-
+![image](https://github.com/user-attachments/assets/4a0ae362-da3f-4335-982f-64053d5a8c7a)
 
 ### Insights:
 +	From the homicide case graph, it is evident that the mixed-race group has the highest number of homicide cases, surpassing both the white and black racial groups. While the white population also has more homicide cases compared to the black population, this does not necessarily imply that the black population is in a safer condition. To obtain a clearer picture, it is crucial to examine the homicide rate, which accounts for differences in population sizes.
