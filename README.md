@@ -6,9 +6,9 @@ The data was sourced from IBGE(Brazilian Institute of Geography and Statistics) 
 
 # The Question:
 1.  What are the racial demographics in each region, and what is the percentage distribution of each race?
-
+ -- 
 2.  How has the population of each racial group changed over the years? Which racial group has the largest population?
-
+-- from 3. stalks about the racial issue.
 3.  How do different racial groups compare in terms of financial status? What are the income levels and economic conditions across races?
 
 4.  What is the percentage of homeless people by race? How has this percentage changed over the years?
@@ -18,27 +18,32 @@ The data was sourced from IBGE(Brazilian Institute of Geography and Statistics) 
 6.  How do political representation and influence vary by race and region? What is the level of political engagement and power held by different racial groups?
 
 # Tools I Used:
-1.  Python: The backbone of my analysis, allowing me to analyze the data and find critical insights. I also used the following Python library:
-
+1.  Python: (NOT NEEDED - LINGUICA)The backbone of my analysis, allowing me to analyze the data and find critical insights. I also used the following Python library:
+-- which one to use for cleaning and manipulating data ?
     •	Pandas Library: This was used to analyze the data.
 
-    •	NumPy: This was used to calculate some parts of the analysis.
+    •	NumPy: This was used to calculate some parts of the analysis. -- some parts -> especify. Otherwise is vague
 
-2.  Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
+2.  Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis. -> Run python scripts and document the data requiremenet and cleaning process 
   
-3.  Visual Studio Code: My go-to for executing my Python scripts.
+3.  Visual Studio Code: My go-to for executing my Python scripts. either choose vs code or jupyter. You don't need both 
 
-4.  Power BI: Essential tool for my visualization graphs, for better readability.
+4.  Power BI: Essential tool for my visualization graphs, for better readability. -> Build visualization for data storytelling
 
 # Data Preparation and Cleanup:
 In total I gathered 5 tables for my analysis, I am only showing the first one as an example, the rest of the table went through a similar cleaning method:
+
+-> All of the codes should be in the code files. Put a """ """ comment at the start of each function that explains the function's input, output. And something else ( search how to annotate a function). 
+To explain each line of code, or parts of it, write #comment on top of it. 
+
+
 ## Table 1: Distribution of the population by Race and Region (2021 – 2012)
 ### 1. Reading and Cleaning Data:
 +	The function ‘process_population_data’ reads an Excel file containing population distribution data by race or color for different regions and states in Brazil.
 
 +	It drops rows and columns with all NaN values and sets appropriate column names.
 
-+	It drops specific rows that are not needed.
++	It drops specific rows that are not needed. -> especify which rows, why they are not needed. Something like Dropped rows that contains headers, or whitespaces
 
 +	It renames columns to English for easier understanding.
 
@@ -48,6 +53,7 @@ import numpy as np
 
 file_path = 'C:\\Users\\Emerson Wu Li\\Desktop\\Files Para Social... Project\\Tabela 1.1 (Pop_Geo).xls'
 
+-- name your variables all lower case. And make them shorter. Try to make them as descriptive as possible with fewer words. 
 df_Distribuição_etária_da_população_por_cor_ou_raça_segundo_regioes = pd.read_excel(file_path, sheet_name = '2021')
 df_cleaned_r = df_Distribuição_etária_da_população_por_cor_ou_raça_segundo_regioes.copy()
 df_cleaned_r = df_cleaned_r.dropna(how = 'all')
@@ -58,12 +64,13 @@ df_cleaned_r = df_cleaned_r.drop(rows_to_drop)
 df_cleaned_r.columns.values[1] = 'Quantity'
 df_cleaned_r.columns.values[0] = 'r'
 
+-- underline btw names and r if they should be read separatedly
 new_column_namesr = {
     'Branca': 'White',
     'Preta': 'Black',
     'Parda': 'Mixed',
     'Preta ou parda': 'Black or Mixed',
-    'Quantity': 'Quantity1(10^3)'
+    'Quantity': 'Quantity1(10^3)' -- try to put a comment here explaining why you put in this form. 
 }
 
 df_cleaned_r = df_cleaned_r.rename(columns = new_column_namesr)
@@ -72,9 +79,10 @@ df_cleaned_r = df_cleaned_r.rename(columns = new_column_namesr)
 ### 2. Mapping Regions and Reshaping Data:
 +	The code creates a dictionary ‘Region’ to map each state to its respective region in Brazil.
 
-+	It adds two new columns, ‘Region’ and’ State’, to the DataFrame based on the values in column ‘r’.
++	It adds two new columns, ‘Region’ and’ State’, to the DataFrame based on the values in column ‘r’. r is race right? So tell the reader in the first time you mention about r
 
-+ Data Frame is reshaped using the 'melt' function to have a long format where each row represents a percentage of a specific race or color in a region or state.
++ Data Frame is reshaped using the 'melt' function to have a long format where each row represents a percentage of a specific race or color in a region or state. -- what is a   long format
+
 
 ```ruby
 Region = {
@@ -99,11 +107,11 @@ df_Distribution_population_Region = df_cleaned_r.copy()
 df_Distribution_population_Region['Year'] = 2021
 ```
 ### 3. Updating and Calculating Population Quantities:
-+	It adjusts the population quantities to ensure consistency across regions.
++	It adjusts the population quantities to ensure consistency across regions. -- what do you mean? It adjusts the units of measure? It seems that you adjusted the scale?
 
-+	It rounds the final population quantities and retains only the relevant columns.
++	It rounds the final population quantities and retains only the relevant columns. 
   
-+	I also needed to correct the values because I initially misinterpreted the percentages from the table.
++	I also needed to correct the values because I initially misinterpreted the percentages from the table. How did you correct the values? What you misterpreted about the percentages? What are the corrected versions? ( what's the result?)
 
 ```ruby
 df_Distribution_population_Region['Quantity(10^3)'] = (df_Distribution_population_Region['Quantity1(10^3)'] * df_Distribution_population_Region['Percentage']) / 100
@@ -118,12 +126,13 @@ region_totals = region_totals.rename(columns={'Quantity(10^3)': 'Region_Total'})
 
 df_Distribution_population_Region = pd.merge(df_Distribution_population_Region, region_totals, on=['Region', 'Year'])
 
+-- updated_qunatity = lower case 
 df_Distribution_population_Region['Updated_Quantity'] = df_Distribution_population_Region['Region_Total'] * (df_Distribution_population_Region['Quantity(10^3)'] / df_Distribution_population_Region.groupby(['Region', 'Year'])['Quantity(10^3)'].transform('sum'))
 
 df_Distribution_population_Region['Quantity(10^3)'] = df_Distribution_population_Region['Updated_Quantity']
 
 df_Distribution_population_Region = df_Distribution_population_Region.drop(columns=['Region_Total', 'Updated_Quantity'])
-df_Distribution_population_Region['Quantity(10^3)'] = df_Distribution_population_Region['Quantity(10^3)'].round().astype(int)
+df_Distribution_population_Region['Quantity(10^3)'] = df_Distribution_population_Region['Quantity(10^3)'].round().astype(int) -- you can just do astype(int) that it will round up for you, i think 
 df_Distribution_population_Region = df_Distribution_population_Region.rename(columns = {4 : 'Race'})
 ```
 ### 4. Combining Data For Multiple Years:
@@ -134,6 +143,8 @@ df_Distribution_population_Region = df_Distribution_population_Region.rename(col
 + The resulting Data Frame ‘df_Distribution_population_Region’ contains the cleaned and processed population data, ready for analysis and reporting.
 
 ```ruby
+
+-- comment here that this is the function anterior , so reader doesn't misunderstand that it's a new function
 def process_population_data(file_path, sheet_name):
     df_Distribuição_etária_da_população_por_cor_ou_raça_segundo_regioes = pd.read_excel(file_path, sheet_name = sheet_name)
     df_cleaned_r = df_Distribuição_etária_da_população_por_cor_ou_raça_segundo_regioes.copy()
@@ -212,6 +223,9 @@ df_Distribution_population_Region['Quantity(10^3)'] = df_Distribution_population
 df_Distribution_population_Region = df_Distribution_population_Region.drop(columns=['Region_Total', 'Updated_Quantity'])
 df_Distribution_population_Region['Quantity(10^3)'] = df_Distribution_population_Region['Quantity(10^3)'].round().astype(int)
 df_Distribution_population_Region = df_Distribution_population_Region.rename(columns = {4 : 'Race'})
+
+
+-- prob show the final cleaned table, the head of it. And explain how each field would be used for analysis. 
 ```
 # The Analysis:
 Combining Python and Power BI this is how I approached each question:
@@ -237,7 +251,7 @@ View my notebook with detailed steps here: Table 1.1.ipynb
 
 
 ### 2. How has the population of each racial group changed over the years? Which racial group has the largest population?
-The analysis was conducted using Power BI, eliminating the need for Python in this case. Power BI efficiently sums the population of each racial group across all regions and years.
+The analysis was conducted using Power BI, eliminating the need for Python in this case. Power BI efficiently sums the population of each racial group across all regions and years. -- take  the adjective or adverb words - efficiently. 
 
 ### Results:
 
