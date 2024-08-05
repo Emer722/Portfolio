@@ -218,5 +218,14 @@ Combining Python and Power BI this is how I approached each question:
 ### 1.  What are the racial demographics in each region, and what is the percentage distribution of each race?
 To find the answer, I filtered the data by State and Race. Then, I calculated the total population and its percentage. Finally, I imported the resulting table into Power BI to create the graph.
 
-View my notebook with detailed steps here:Table 1.1.ipynb
+View my notebook with detailed steps here: Table 1.1.ipynb
+
+Results:
+
+<img width="709" alt="1" src="https://github.com/user-attachments/assets/39d1c907-daf3-44f1-83ed-8cb69f084cfb">
+
+
+<img width="709" alt="2" src="https://github.com/user-attachments/assets/9ef5ec5d-f649-41fd-b191-cb5516edc577">
+
+
 
