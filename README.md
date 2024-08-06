@@ -6,9 +6,9 @@ The data was sourced from IBGE(Brazilian Institute of Geography and Statistics) 
 
 # The Question:
 1.  What are the racial demographics in each region, and what is the percentage distribution of each race?
- -- 
+ 
 2.  How has the population of each racial group changed over the years? Which racial group has the largest population?
--- from 3. stalks about the racial issue.
+
 3.  How do different racial groups compare in terms of financial status? What are the income levels and economic conditions across races?
 
 4.  What is the percentage of homeless people by race? How has this percentage changed over the years?
@@ -18,12 +18,11 @@ The data was sourced from IBGE(Brazilian Institute of Geography and Statistics) 
 6.  How do political representation and influence vary by race and region? What is the level of political engagement and power held by different racial groups?
 
 # Tools I Used:
-1.  Python library:
-    •	Pandas Library: This was used to analyze, clean and manipulate the data.
+1. Pandas Library: This was used to analyze, clean, and manipulate the data.
 
 2.  Jupyter Notebooks: Run Python scripts and document the data requirement and cleaning process 
    
-4.  Power BI: Build visualization for data storytelling
+3.  Power BI: Build visualization for data storytelling
 
 # Data Preparation and Cleanup:
 In total I gathered 5 tables for my analysis, the data preparation and cleanup detailed steps are in my notebook.
