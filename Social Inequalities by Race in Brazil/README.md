@@ -85,7 +85,7 @@ View my notebook with detailed steps here: [Social Inequalities by Race in Brazi
 
 +	To determine whether this financial advantage for the white race was a trend specific to 2021 or a consistent pattern, I extended the analysis to cover the period from 2012 to 2021. The results show that the white population continues to have an average salary that is R$ 1,200 higher than that of mixed-race and black individuals over the decade.
 
-View my notebook with detailed steps here:
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Financial Comparison Among Races.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Financial%20Comparison%20Among%20Races.ipynb)
 
 ### 4. What is the percentage of homeless people by race? How has this percentage changed over the years?
 +	This analysis examines the proportion of homeless individuals in Brazil, categorized by race and region. It aims to provide insights into the housing situation of different racial groups across various regions, highlighting disparities and revealing how well each group is faring in terms of stable housing.
