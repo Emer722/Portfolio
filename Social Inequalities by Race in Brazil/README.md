@@ -103,7 +103,7 @@ View my notebook with detailed steps here: [Social Inequalities by Race in Brazi
 
 + In the final analysis, I compared homelessness rates from 2016 to 2019. As anticipated, white individuals have a lower proportion of homelessness compared to black and mixed-race individuals, averaging around 8% less. Additionally, the proportions of homelessness among black and mixed-race individuals are almost identical. This indicates that black and mixed-race populations experience significantly more challenging housing conditions compared to their white counterparts.
 
-View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Homelessness by Race.ipynb]
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Homelessness by Race.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Homelessness%20by%20Race.ipynb)
 
 ### 5. What are the homicide rates by region and race? How have these rates evolved over the years?
 +	This analysis focuses on assessing the safety and living conditions of different racial groups by examining homicide case quantity over time. By evaluating how each racial group is affected by violence and how these rates have evolved, we can gain insights into the safety and quality of life experienced by these communities.
