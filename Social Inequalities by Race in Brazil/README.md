@@ -121,7 +121,7 @@ View my notebook with detailed steps here: [Social Inequalities by Race in Brazi
 
 + Upon reviewing the homicide rate graph, we see that the mixed-race group continues to lead in terms of homicide rate. This is because the mixed-race and white populations are relatively similar in size. Additionally, the black population has a higher homicide rate compared to the white population. Consequently, the data suggests that the white population experiences the safest living conditions compared to the other racial groups.
 
-View my notebook with detailed steps here:
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Homicide Rates by Region and Race.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Homicide%20Rates%20by%20Region%20and%20Race.ipynb)
 
 ### 6. How do political representation and influence vary by race and region? What is the political engagement and power held by different racial groups?
 +	In this analysis, I examined how different racial groups, including East Asian and Native races newly added to the dataset by the IBGE (Brazilian Institute of Geography and Statistics), influence political dynamics(Mayor and City Council). Specifically, I investigated the distribution of political power among various regions and racial groups.
