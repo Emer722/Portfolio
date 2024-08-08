@@ -1,1 +1,1073 @@
+CREATE TABLE Players (
+    ranking INT AUTO_INCREMENT PRIMARY KEY ,
+    name VARCHAR(50)  NOT NULL , 
+    height DECIMAL(6,2)  NOT NULL ,
+    weight INT,
+    retired INT  
+);
 
+CREATE TABLE Team (
+    team_id INT AUTO_INCREMENT PRIMARY KEY ,
+    team_name VARCHAR(50)  NOT NULL  
+);
+
+CREATE TABLE height_three_point_relation (
+    ranking INT  NOT NULL ,
+    height DECIMAL(6,2)  NOT NULL ,
+    gp INT  NOT NULL ,
+    three_point_made INT NOT NULL ,
+    `three_point_FG%` DECIMAL(6,2) NOT NULL ,
+    PRIMARY KEY (ranking)
+);
+
+CREATE TABLE 3P_vs_longetivity (
+    ranking INT NOT NULL,
+    gp INT,
+    minutes_played INT,
+    three_point_made DECIMAL(6,2),
+    two_point_made INT,
+    free_throws_made INT,
+    three_point_attempt INT,
+    two_point_attempt INT,
+    Free_throws_attempt INT,
+    all_star_selection INT,
+    PRIMARY KEY (ranking)
+);
+
+
+CREATE TABLE team_3P_vs_going_playoffs (
+    team_id INT  NOT NULL ,
+    season INT  NOT NULL ,
+    avg_three_point_attempt_per_game INT  NOT NULL ,
+    avg_three_point_made_per_game DECIMAL(6,2)  NOT NULL ,
+    win_percentage DECIMAL(6,2)  NOT NULL ,
+    `in playoffs` VARCHAR(10),
+    PRIMARY KEY (team_id)
+);
+
+ALTER TABLE height_three_point_relation
+ADD CONSTRAINT fk_ranking
+FOREIGN KEY (ranking) REFERENCES players (ranking);
+
+ALTER TABLE 3P_vs_longetivity
+ADD CONSTRAINT fk_ranking_2 
+FOREIGN KEY (ranking) REFERENCES players (ranking);
+
+ALTER TABLE team_3P_vs_going_playoffs 
+ADD CONSTRAINT fk_team_id 
+FOREIGN KEY (team_id) REFERENCES Team (team_id);
+
+LOAD DATA INFILE 'C:\\excell para sql\\Players.csv'
+INTO TABLE players
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'C:\\excell para sql\\Team.csv'
+INTO TABLE Team
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'C:\\excell para sql\\height_three_point_relation.csv'
+INTO TABLE height_three_point_relation
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+DELETE FROM 3p_vs_longetivity;
+LOAD DATA INFILE 'C:\\excell para sql\\3P_vs_longetivity.csv'
+INTO TABLE  3P_vs_longetivity
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'C:\\excell para sql\\team_3P_vs_going_playoffs.csv'
+INTO TABLE  team_3P_vs_going_playoffs
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+SELECT * FROM height_three_point_relation;
+SELECT * FROM players;
+SELECT * FROM 3p_vs_longetivity;
+SELECT * FROM team;
+SELECT * FROM team_3P_vs_going_playoffs;
+
+
+--   old
+--   analysis
+
+-- height_three_point_relation:
+
+-- AVG height(everything):
+SELECT AVG(height) AS average_height
+FROM height_three_point_relation;
+
+-- height > 1.9586:
+
+SELECT * FROM height_three_point_relation
+WHERE height >= 1.9586;
+
+-- AVG height:
+SELECT AVG(height) AS average_height
+FROM height_three_point_relation
+WHERE height >= 1.9586;
+
+-- AVG three_point_made:
+SELECT AVG(three_point_made) AS average_three_point_made
+FROM height_three_point_relation
+WHERE height >= 1.9586;
+
+-- In how many games AVG:
+SELECT AVG(gp) AS average_gp
+FROM height_three_point_relation
+WHERE height >= 1.9586;
+
+-- AVG three_point_FG%:
+SELECT AVG(`three_point_FG%`) AS `average_three_point_FG%`
+FROM height_three_point_relation
+WHERE height >= 1.9586;
+
+
+-- height < 1.9586:
+
+SELECT * FROM height_three_point_relation
+WHERE height <= 1.9586;
+
+-- AVG height:
+SELECT AVG(height) AS average_height
+FROM height_three_point_relation
+WHERE height <= 1.9586;
+
+-- AVG three_point_made:
+SELECT AVG(three_point_made) AS average_three_point_made
+FROM height_three_point_relation
+WHERE height <= 1.9586;
+
+-- In how many games AVG:
+SELECT AVG(gp) AS average_gp
+FROM height_three_point_relation
+WHERE height <= 1.9586;
+
+--AVG three_point_FG%:
+SELECT AVG(`three_point_FG%`) AS `average_three_point_FG%`
+FROM height_three_point_relation
+WHERE height <= 1.9586;
+
+-- Difference between 3P-FG%:
+SELECT 
+(SELECT AVG(`three_point_FG%`) FROM height_three_point_relation WHERE height > 1.9586) -
+(SELECT AVG(`three_point_FG%`) FROM height_three_point_relation WHERE height < 1.9586)
+AS Difference_between_3PFG;
+
+-- Difference between 3p made per game
+SELECT
+((SELECT AVG(three_point_made) FROM height_three_point_relation WHERE height < 1.9586) /
+(SELECT AVG(gp) FROM height_three_point_relation WHERE height < 1.9586) -
+(SELECT AVG(three_point_made) FROM height_three_point_relation WHERE height > 1.9586) /
+(SELECT AVG(gp) FROM height_three_point_relation WHERE height > 1.9586))
+AS AVG_3p_per_game_difference;
+
+
+
+-- 3P_vs_longetivity
+
+-- In Hall of Fame:
+
+-- AVG minutes,gp played
+SELECT AVG(minutes_played) FROM 3p_vs_longetivity
+WHERE Hall_of_Fame = 9;
+
+SELECT AVG(gp) FROM 3p_vs_longetivity
+WHERE Hall_of_Fame = 9;
+
+
+-- avg minutes > 39004.6923
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 39004.6923 AND Hall_of_Fame = 9;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 39004.6923 AND Hall_of_Fame = 9;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 39004.6923 AND Hall_of_Fame = 9;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 39004.6923 AND Hall_of_Fame = 9;
+
+
+
+-- avg minutes < 39004.6923
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 39004.6923 AND Hall_of_Fame = 9;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 39004.6923 AND Hall_of_Fame = 9;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 39004.6923 AND Hall_of_Fame = 9;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 39004.6923 AND Hall_of_Fame = 9;
+
+
+
+-- Not in Hall of Fame:
+
+-- AVG minutes,gp played:
+SELECT AVG(minutes_played) FROM 3p_vs_longetivity
+WHERE Hall_of_Fame = 0;
+
+SELECT AVG(gp) FROM 3p_vs_longetivity
+WHERE Hall_of_Fame = 0;
+
+
+-- avg minutes > 30739.3333
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 30739.3333 AND Hall_of_Fame = 0;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 30739.3333 AND Hall_of_Fame = 0;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 30739.3333 AND Hall_of_Fame = 0;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 30739.3333 AND Hall_of_Fame = 0;
+
+
+-- avg minutes < 30739.3333
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 30739.3333 AND Hall_of_Fame = 0;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 30739.3333 AND Hall_of_Fame = 0;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 30739.3333 AND Hall_of_Fame = 0;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 30739.3333 AND Hall_of_Fame = 0;
+
+
+
+
+-- height and minutes:
+
+SELECT players.ranking, players.name, players.height, 3p_vs_longetivity.minutes_played
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking
+WHERE minutes_played < 34576.82;
+
+SELECT players.ranking, players.name, players.height, 3p_vs_longetivity.minutes_played
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking
+WHERE minutes_played > 34576.82;
+
+-- Avg height and minutes played relation:
+
+SELECT AVG(players.height) AS average_height
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking
+WHERE minutes_played > 34576.82;
+
+SELECT AVG(players.height) AS average_height
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking
+WHERE minutes_played < 34576.82;
+
+
+-- team_3P_vs_going_playoffs
+
+
+-- team that went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 9;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 9;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 9;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 9;
+
+-- team that didnt went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 0;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 0;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 0;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 0;
+
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id;
+
+
+
+-- Top 5 teams:
+
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+ORDER BY win_percentage DESC
+LIMIT 5;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (2, 8, 21, 18, 13);
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (2, 8, 21, 18, 13);
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (2, 8, 21, 18, 13)) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (2, 8, 21, 18, 13));
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE team_id IN (2, 8, 21, 18, 13);
+
+
+
+
+-- Bottom 5 teams;
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+ORDER BY win_percentage 
+LIMIT 5;
+
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (9, 30, 4, 25, 27);
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (9, 30, 4, 25, 27);
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (9, 30, 4, 25, 27)) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (9, 30, 4, 25, 27))
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE team_id IN (9, 30, 4, 25, 27);
+
+
+-- testing:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+ORDER BY win_percentage DESC;
+
+SELECT players.ranking, players.name, players.height,  3p_vs_longetivity.gp, 3p_vs_longetivity.three_point_made, 3p_vs_longetivity.two_point_made, 3p_vs_longetivity.minutes_played, 3p_vs_longetivity.free_throws_made, 3p_vs_longetivity.all_star_selection
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking;
+
+
+SELECT COUNT(ranking)
+FROM 3p_vs_longetivity;
+
+
+
+SELECT COUNT(ranking)
+from 3p_vs_longetivity
+WHERE minutes_played > 39004.6923 and Hall_of_Fame = 9;
+
+
+SELECT COUNT(ranking)
+from 3p_vs_longetivity
+WHERE minutes_played < 39004.6923 and Hall_of_Fame = 9;
+
+
+SELECT COUNT(ranking)
+from 3p_vs_longetivity
+WHERE minutes_played > 39004.6923 and Hall_of_Fame = 0;
+
+
+SELECT * FROM 3p_vs_longetivity
+WHERE minutes_played >= 39004.6923 and Hall_of_Fame = 9;
+
+SELECT * FROM 3p_vs_longetivity
+WHERE minutes_played <= 39004.6923 and Hall_of_Fame = 9;
+
+ALTER TABLE 3p_vs_longetivity ADD Free_throws_attempt INT;
+DELETE FROM 3p_vs_longetivity;
+
+
+SELECT players.ranking, players.name, players.height,  3p_vs_longetivity.gp, 3p_vs_longetivity.three_point_made, 3p_vs_longetivity.two_point_made, 3p_vs_longetivity.minutes_played, 3p_vs_longetivity.free_throws_made
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking;
+
+SELECT COUNT (ranking) FROM 3p_vs_longetivity
+WHERE minutes_played >= 30739.3333 AND Hall_of_Fame = 0;
+
+
+SELECT COUNT (ranking) FROM 3p_vs_longetivity
+WHERE minutes_played <= 30739.3333 AND Hall_of_Fame = 0;
+
+
+SELECT COUNT (ranking) FROM 3p_vs_longetivity
+WHERE minutes_played >= 39004.6923 AND Hall_of_Fame = 9;
+
+
+SELECT COUNT (ranking) FROM 3p_vs_longetivity
+WHERE minutes_played <= 39004.6923 AND Hall_of_Fame = 9;
+
+SELECT players.ranking, players.name, players.height,  3p_vs_longetivity.gp, 3p_vs_longetivity.three_point_attempt, 3p_vs_longetivity.two_point_attempt, 3p_vs_longetivity.minutes_played, 3p_vs_longetivity.Free_throws_attempt
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking
+WHERE minutes_played <= 30739.3333 AND Hall_of_Fame = 0;
+
+
+SELECT players.ranking, players.name, players.height,  3p_vs_longetivity.gp, 3p_vs_longetivity.three_point_attempt, 3p_vs_longetivity.two_point_attempt, 3p_vs_longetivity.minutes_played, 3p_vs_longetivity.Free_throws_attempt
+FROM 3p_vs_longetivity 
+JOIN players ON players.ranking=3p_vs_longetivity.ranking
+WHERE minutes_played >= 30739.3333 AND Hall_of_Fame = 0;
+
+
+
+
+--  new
+--  analysis
+
+
+-- height_three_point_relation:
+
+-- AVG height(everything):
+SELECT AVG(height) AS average_height
+FROM height_three_point_relation;
+
+-- height > 1.963300:
+
+SELECT players.ranking, players.name, height_three_point_relation.height, height_three_point_relation.gp, height_three_point_relation.three_point_made,  height_three_point_relation.`three_point_FG%`
+FROM height_three_point_relation
+JOIN players ON players.ranking=height_three_point_relation.ranking
+WHERE height_three_point_relation.height >= 1.963300;
+
+-- AVG height:
+SELECT AVG(height) AS average_height
+FROM height_three_point_relation
+WHERE height >= 1.963300;
+
+-- AVG three_point_made:
+SELECT AVG(three_point_made) AS average_three_point_made
+FROM height_three_point_relation
+WHERE height >= 1.963300;
+
+-- In how many games AVG:
+SELECT AVG(gp) AS average_gp
+FROM height_three_point_relation
+WHERE height >= 1.963300;
+
+-- AVG three_point_FG%:
+SELECT AVG(`three_point_FG%`) AS `average_three_point_FG%`
+FROM height_three_point_relation
+WHERE height >= 1.963300;
+
+
+-- height < 1.963300:
+
+SELECT players.ranking, players.name, height_three_point_relation.height, height_three_point_relation.gp, height_three_point_relation.three_point_made,  height_three_point_relation.`three_point_FG%`
+FROM height_three_point_relation
+JOIN players ON players.ranking=height_three_point_relation.ranking
+WHERE height_three_point_relation.height <= 1.963300;
+
+-- AVG height:
+SELECT AVG(height) AS average_height
+FROM height_three_point_relation
+WHERE height <= 1.963300;
+
+-- AVG three_point_made:
+SELECT AVG(three_point_made) AS average_three_point_made
+FROM height_three_point_relation
+WHERE height <= 1.963300;
+
+-- In how many games AVG:
+SELECT AVG(gp) AS average_gp
+FROM height_three_point_relation
+WHERE height <= 1.963300;
+
+--AVG three_point_FG%:
+SELECT AVG(`three_point_FG%`) AS `average_three_point_FG%`
+FROM height_three_point_relation
+WHERE height <= 1.963300;
+
+-- Difference between 3P-FG%:
+SELECT 
+(SELECT AVG(`three_point_FG%`) FROM height_three_point_relation WHERE height > 1.963300) -
+(SELECT AVG(`three_point_FG%`) FROM height_three_point_relation WHERE height < 1.963300)
+AS Difference_between_3PFG;
+
+-- Difference between 3p made per game
+SELECT
+((SELECT AVG(three_point_made) FROM height_three_point_relation WHERE height < 1.963300) /
+(SELECT AVG(gp) FROM height_three_point_relation WHERE height < 1.963300) -
+(SELECT AVG(three_point_made) FROM height_three_point_relation WHERE height > 1.963300) /
+(SELECT AVG(gp) FROM height_three_point_relation WHERE height > 1.963300))
+AS AVG_3p_per_game_difference;
+
+
+
+-- 3P_vs_longetivity
+
+-- In all star games:
+
+-- AVG minutes,gp played
+SELECT AVG(minutes_played) FROM 3p_vs_longetivity
+WHERE all_star_selection = 0;
+
+SELECT AVG(gp) FROM 3p_vs_longetivity
+WHERE all_star_selection = 0;
+
+
+-- avg minutes > 32219.3621
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 32219.3621 AND all_star_selection = 0;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 32219.3621 AND all_star_selection = 0;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 32219.3621 AND all_star_selection = 0;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 32219.3621 AND all_star_selection = 0;
+
+
+
+-- avg minutes < 32219.3621
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 32219.3621 AND all_star_selection = 0;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 32219.3621 AND  all_star_selection = 0;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 32219.3621 AND  all_star_selection = 0;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 32219.3621 AND  all_star_selection = 0;
+
+
+
+-- Not in all star games:
+
+-- AVG minutes,gp played:
+SELECT AVG(minutes_played) FROM 3p_vs_longetivity
+WHERE all_star_selection = 9;
+
+SELECT AVG(gp) FROM 3p_vs_longetivity
+WHERE all_star_selection = 9;
+
+
+-- avg minutes >= 21349.8713
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 21349.8713 AND all_star_selection = 9;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 21349.8713 AND all_star_selection = 9;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 21349.8713 AND all_star_selection = 9;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played >= 21349.8713 AND all_star_selection = 9;
+
+
+-- avg minutes <= 21349.8713
+
+-- AVG minutes played:
+SELECT AVG(minutes_played) AS AVG_minutes_played
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 21349.8713 AND all_star_selection = 9;
+
+--AVG 3P attempt:
+SELECT AVG(three_point_attempt) AS AVG_three_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 21349.8713 AND all_star_selection = 9;
+
+--AVG 2P attempt:
+SELECT AVG(two_point_attempt) AS AVG_two_point_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 21349.8713 AND all_star_selection = 9;
+
+--AVG FTA attempt:
+SELECT AVG(Free_throws_attempt) AS AVG_free_throw_attempt
+FROM 3p_vs_longetivity
+WHERE minutes_played <= 21349.8713 AND all_star_selection = 9;
+
+
+-- team_3P_vs_going_playoffs
+
+-- 2024 season:
+
+-- team that went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 9 AND season = 2024;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS 3PA_2024
+WHERE `in playoffs` = 9 AND season = 2024;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 9 AND season = 2024;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9 AND season = 2024) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9 AND season = 2024)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 9 AND season = 2024;
+
+-- team that didnt went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 0 AND season = 2024;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 0 AND season = 2024;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 0 AND season = 2024;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0 AND season = 2024) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0 AND season = 2024)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 0 AND season = 2024;
+
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id;
+
+
+
+-- Top 5 teams:
+
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE season = 2024
+ORDER BY win_percentage DESC 
+LIMIT 5;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (2, 8, 21, 18, 13);
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (2, 8, 21, 18, 13);
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (2, 8, 21, 18, 13)) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (2, 8, 21, 18, 13));
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE team_id IN (2, 8, 21, 18, 13);
+
+
+
+
+-- Bottom 5 teams;
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE season = 2024
+ORDER BY win_percentage 
+LIMIT 5;
+
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (9, 30, 4, 25, 27);
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (9, 30, 4, 25, 27);
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE team_id IN (9, 30, 4, 25, 27)) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE team_id IN (9, 30, 4, 25, 27))
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE team_id IN (9, 30, 4, 25, 27);
+
+-- Difference between avg of 3PM team that went to playoffs and didnt go to playoffs:
+
+SELECT
+((SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 9 AND season = 2024) - 
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3P_vs_going_playoffs
+WHERE `in playoffs` = 0 AND season = 2024));
+
+-- Difference between avg of 3PFG% team that went to playoffs and didnt go to playoffs:
+
+SELECT
+((SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 9 AND season = 2024) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 9 AND season = 2024)
+-
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3P_vs_going_playoffs
+WHERE `in playoffs` = 0 AND season = 2024) /
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 0 AND season = 2024));
+
+
+-- 2022 season:
+
+
+-- team that went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 9 AND season = 2022;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 9 AND season = 2022;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 9 AND season = 2022;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9 AND season = 2022) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9 AND season = 2022)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 9 AND season = 2022;
+
+-- team that didnt went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 0 AND season = 2022;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 0 AND season = 2022;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 0 AND season = 2022;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0 AND season = 2022) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0 AND season = 2022)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 0 AND season = 2022;
+
+
+-- 2013 season:
+
+-- team that went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 9 AND season = 2013;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 9 AND season = 2013;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 9 AND season = 2013;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9 AND season = 2013) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 9 AND season = 2013)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 9 AND season = 2013;
+
+-- team that didnt went to playoffs:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE `in playoffs` = 0 AND season = 2013;
+
+-- avg 3p attempt/game:
+
+SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_attempt
+WHERE `in playoffs` = 0 AND season = 2013;
+
+-- avg 3p made/game:
+
+SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs AS avg_3p_made
+WHERE `in playoffs` = 0 AND season = 2013;
+
+-- avg 3p percentage/game:
+
+SELECT
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0 AND season = 2013) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs 
+WHERE `in playoffs` = 0 AND season = 2013)
+AS 3_point_percentage;
+
+-- avg win percentage:
+
+SELECT AVG(win_percentage) FROM team_3p_vs_going_playoffs AS avg_win_percentage
+WHERE `in playoffs` = 0 AND season = 2013;
+
+-- Difference between avg of 3PM team that went to playoffs and didnt go to playoffs:
+
+SELECT
+((SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 9 AND season = 2013) - 
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3P_vs_going_playoffs
+WHERE `in playoffs` = 0 AND season = 2013));
+
+-- Difference between avg of 3PFG% team that went to playoffs and didnt go to playoffs:
+
+SELECT
+((SELECT AVG(avg_three_point_made_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 9 AND season = 2013) / 
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 9 AND season = 2013)
+- 
+(SELECT AVG(avg_three_point_made_per_game) FROM team_3P_vs_going_playoffs
+WHERE `in playoffs` = 0 AND season = 2013) /
+(SELECT AVG(avg_three_point_attempt_per_game) FROM team_3p_vs_going_playoffs
+WHERE `in playoffs` = 0 AND season = 2013));
+
+-- top 5 teams of 2020 and top 5 of 2014:
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE season = 2020 
+ORDER BY win_percentage DESC 
+LIMIT 5;
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE season = 2014
+ORDER BY win_percentage DESC 
+LIMIT 5;
+
+-- teams that have above 50% and below win percentage(2024):
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE win_percentage >= 0.50 AND season = 2024;
+
+SELECT team.team_name, team_3p_vs_going_playoffs.team_id, team_3p_vs_going_playoffs.season, team_3p_vs_going_playoffs.avg_three_point_attempt_per_game, team_3p_vs_going_playoffs.avg_three_point_made_per_game, team_3p_vs_going_playoffs.win_percentage
+FROM team_3p_vs_going_playoffs
+JOIN team ON team.team_id=team_3p_vs_going_playoffs.team_id
+WHERE win_percentage <= 0.50 AND season = 2024;
