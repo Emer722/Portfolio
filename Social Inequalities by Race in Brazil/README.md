@@ -32,7 +32,8 @@ Combining Python and Power BI this is how I approached each question:
 ### 1.  What are the racial demographics in each region, and what is the percentage distribution of each race?
 To find the answer, I filtered the data by State and Race. Then, I calculated the total population and its percentage. Finally, I imported the resulting table into Power BI to create the graph.
 
-View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Distribution%20by%20Race.ipynb)
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb]
+(https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Demographic%20Distribution%20by%20Race.ipynb)
 
 ### Results:
 
@@ -63,7 +64,8 @@ The analysis was conducted using Power BI, eliminating the need for Python in th
 
 +	The graph clearly illustrates the significant disparity between the black population and the other racial groups, highlighting a substantial gap.
 
-View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Distribution%20by%20Race.ipynb)
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb]
+(https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Demographic%20Distribution%20by%20Race.ipynb)
 
 ### 3. How do different racial groups compare in terms of financial status? What are the income levels and economic conditions across races?
 + This analysis focuses on the salary data categorized by race and region in Brazil, specifically examining formal employment. In this context, formal employment refers to jobs that are officially recognized by the government, typically offering job security, benefits, and compliance with labor laws.
@@ -86,6 +88,7 @@ View my notebook with detailed steps here: [Social Inequalities by Race in Brazi
 +	To determine whether this financial advantage for the white race was a trend specific to 2021 or a consistent pattern, I extended the analysis to cover the period from 2012 to 2021. The results show that the white population continues to have an average salary that is R$ 1,200 higher than that of mixed-race and black individuals over the decade.
 
 View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Financial Comparison Among Races.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Financial%20Comparison%20Among%20Races.ipynb)
+
 
 ### 4. What is the percentage of homeless people by race? How has this percentage changed over the years?
 +	This analysis examines the proportion of homeless individuals in Brazil, categorized by race and region. It aims to provide insights into the housing situation of different racial groups across various regions, highlighting disparities and revealing how well each group is faring in terms of stable housing.
