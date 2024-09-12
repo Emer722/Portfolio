@@ -32,8 +32,7 @@ Combining Python and Power BI this is how I approached each question:
 ### 1.  What are the racial demographics in each region, and what is the percentage distribution of each race?
 To find the answer, I filtered the data by State and Race. Then, I calculated the total population and its percentage. Finally, I imported the resulting table into Power BI to create the graph.
 
-View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb]
-(https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Demographic%20Distribution%20by%20Race.ipynb)
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Demographic%20Distribution%20by%20Race.ipynb)
 
 ### Results:
 
@@ -64,8 +63,7 @@ The analysis was conducted using Power BI, eliminating the need for Python in th
 
 +	The graph clearly illustrates the significant disparity between the black population and the other racial groups, highlighting a substantial gap.
 
-View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb]
-(https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Demographic%20Distribution%20by%20Race.ipynb)
+View my notebook with detailed steps here: [Social Inequalities by Race in Brazil/Distribution by Race.ipynb](https://github.com/Emer722/Portfolio/blob/main/Social%20Inequalities%20by%20Race%20in%20Brazil/Demographic%20Distribution%20by%20Race.ipynb)
 
 ### 3. How do different racial groups compare in terms of financial status? What are the income levels and economic conditions across races?
 + This analysis focuses on the salary data categorized by race and region in Brazil, specifically examining formal employment. In this context, formal employment refers to jobs that are officially recognized by the government, typically offering job security, benefits, and compliance with labor laws.
