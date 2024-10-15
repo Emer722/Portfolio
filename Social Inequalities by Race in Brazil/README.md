@@ -51,7 +51,7 @@ View my notebook with detailed steps here: [Social Inequalities by Race in Brazi
 
 
 ### 2. How has the population of each racial group changed over the years? Which racial group has the largest population?
-The analysis was conducted using Power BI, eliminating the need for Python in this case. Power BI efficiently sums the population of each racial group across all regions and years. -- take  the adjective or adverb words - efficiently. 
+The analysis was conducted using Power BI, eliminating the need for Python in this case. Power BI efficiently sums the population of each racial group across all regions and years.
 
 ### Results:
 
