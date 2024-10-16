@@ -12,7 +12,7 @@ This project stems from my interest in understanding health and longevity. I gat
 
 3.  What is the difference in life expectancy between men and women at birth and at age 60? How has this difference changed over the years?
 
-4.  How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions? This includes factors such as access to basic drinking water, obesity rates, average protein supply, and minimum dietary energy requirements.
+4.  How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions? 
 
 5.  How do the top and bottom countries differ across each category and subcategory of death causes?
 
@@ -109,8 +109,12 @@ In this analysis, I used Python to perform all the necessary calculations and Po
 
 + For females: The increase in life expectancy at birth for the top countries is **0.22 years**, while for the bottom countries, it's **0.60 years**. Similarly, the increase in life expectancy at age 60 is **0.16 years** for the top countries and **0.11 years** for the bottom countries.
 
-### How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions? This includes factors such as access to basic drinking water, obesity rates, average protein supply, and minimum dietary energy requirements.
+### How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions?
+In this analysis, I collected factors such as access to basic drinking water, obesity rates, average protein supply, and minimum dietary energy requirements from FAO to evaluate the living conditions in different countries. I used Python for the analysis and Power BI for the visualization.
 
+### Results:
+
+####
 
 
 
