@@ -84,6 +84,26 @@ In this analysis, I used Python to calculate the median increase in life expecta
 + It is evident that the top countries experienced a smaller increase in life expectancy at birth compared to the bottom countries. However, the opposite trend is observed for life expectancy at age 60, where the top countries saw a greater increase than the bottom countries.
 
 ### What is the difference in life expectancy between men and women at birth and at age 60? How has this difference changed over the years?
+In this analysis, I used Python to perform all the necessary calculations and Power BI for data visualization.
+
+### Results:
+
+#### At birth:
+##### Top:
+<img width="563" alt="3 a" src="https://github.com/user-attachments/assets/597c8f39-9b56-4682-a4db-ed5c37322fd6">
+
+##### Bottom:
+<img width="565" alt="3 b" src="https://github.com/user-attachments/assets/c21accdd-b194-4ed0-8934-62d31580a8a3">
+
+#### At 60:
+##### Top:
+<img width="569" alt="3 c" src="https://github.com/user-attachments/assets/cef13b2f-6b13-4557-94e3-5b5c21150f6d">
+
+##### Bottom:
+<img width="566" alt="3 d" src="https://github.com/user-attachments/assets/b4f38afa-c504-402d-9cbb-811aa5231534">
+
+
+
 
 
 
