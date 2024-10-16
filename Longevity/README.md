@@ -114,7 +114,7 @@ In this analysis, I collected factors such as access to basic drinking water, ob
 
 ### Results:
 
-#### Basic drinking water:
+#### Basic drinking water(%):
 ##### Top:
   <img src="https://github.com/user-attachments/assets/60afee69-081d-4a28-967d-970fadf2f5ac" alt="Image 2" width="900"/>
 </p>
@@ -123,7 +123,7 @@ In this analysis, I collected factors such as access to basic drinking water, ob
   <img src="https://github.com/user-attachments/assets/d96fcd4f-7e4e-4179-bef0-d5619dfa74c0" alt="Image 2" width="900"/>
 </p>
 
-#### Obesity in adults:
+#### Obesity in adults(%):
 ##### Top:
    <img src="https://github.com/user-attachments/assets/eae96c25-6220-469a-9cde-3adc96fa0347" alt="Image 2" width="900"/>
 </p>
@@ -132,7 +132,7 @@ In this analysis, I collected factors such as access to basic drinking water, ob
    <img src="https://github.com/user-attachments/assets/f96bcb00-193d-4f6b-aa93-69af067e9997" alt="Image 2" width="900"/>
 </p>
 
-#### Avg. Protein Supply:
+#### Avg. Protein Supply(g/cap/d):
 ##### Top:
    <img width="496" alt="4 e" src="https://github.com/userattachments/assets/f463c829-3075-4f18-acba-9ff854cb054e" alt="Image 2" width="900"/>
 </p>
@@ -141,7 +141,7 @@ In this analysis, I collected factors such as access to basic drinking water, ob
 <img src="https://github.com/user-attachments/assets/ee0dbfd1-bda2-4081-8739-fe0b2638a9f9" alt="Image 2" width="900"/>
 </p>
 
-#### Min. Dietary Energy Requirement:
+#### Min. Dietary Energy Requirement(kcal/cap/d):
 ##### Top:
 <img src="https://github.com/user-attachments/assets/55c58871-9024-48fd-a43e-373be1ae17b1" alt="Image 2" width="900"/>
 </p>
