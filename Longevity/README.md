@@ -102,7 +102,14 @@ In this analysis, I used Python to perform all the necessary calculations and Po
 ##### Bottom:
 <img width="566" alt="3 d" src="https://github.com/user-attachments/assets/b4f38afa-c504-402d-9cbb-811aa5231534">
 
+### Insights:
++ In every category, females have a higher life expectancy than males in both the top and bottom countries. The median difference is **3.66 years** for the top countries and **3 years** for the bottom countries across both categories.
 
++ For males: the increase in life expectancy at birth for the top countries is **0.29 years**, while for the bottom countries, it's **0.48 years**. Similarly, the increase in life expectancy at age 60 is **0.17 years** for the top countries and **0.13 years** for the bottom countries.
+
++ For females: The increase in life expectancy at birth for the top countries is **0.22 years**, while for the bottom countries, it's **0.60 years**. Similarly, the increase in life expectancy at age 60 is **0.16 years** for the top countries and **0.11 years** for the bottom countries.
+
+### How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions? This includes factors such as access to basic drinking water, obesity rates, average protein supply, and minimum dietary energy requirements.
 
 
 
