@@ -34,7 +34,7 @@ This project stems from my interest in understanding health and longevity. I gat
 Combining Python and Power BI this is how I approached each question:
 
 ### 1.  Which countries have the highest life expectancy at birth and at age 60, and which countries have the lowest in both categories?
-First, I separated the top and bottom countries by identifying the top 30% and bottom 30% in each category to improve the analysis. This approach reduced the number of countries in Python, making it more manageable, and then I visualized the results in Power BI.
+First, I separated the top and bottom countries by identifying the top 30% and bottom 30% in each category, from 2000 to 2021, to improve the analysis. This approach reduced the number of countries in Python, making it more manageable, and then I visualized the results in Power BI.
 
 ### Results:
 
@@ -53,6 +53,37 @@ First, I separated the top and bottom countries by identifying the top 30% and b
 <img width="1018" alt="1 d" src="https://github.com/user-attachments/assets/94c11bdb-c079-4fa1-8a27-d4dfff7246e5">
 
 ### Insights:
++ The graph reveals a significant difference in life expectancy between the top and bottom countries, with a gap of **16.45** years at birth and **6.17** years at age 60.
+
++ The graph also highlights that **Japan** leads in both categories, with the highest life expectancy at birth and at age 60.
+
+### How has life expectancy at birth and at age 60 increased over the years for both genders? Are the top-ranking and bottom-ranking countries also experiencing an increase in life expectancy?
+In this analysis, I used Python to calculate the median increase in life expectancy at birth and at age 60, and utilized Power BI for the visualization.
+
+### Results:
+
+#### At birth:
+##### Top:
+<img width="508" alt="2-a" src="https://github.com/user-attachments/assets/cdf1d1af-a5b1-4e90-be08-33f99d60abff">
+
+##### Bottom:
+<img width="510" alt="2 b" src="https://github.com/user-attachments/assets/29e7ef5f-ab8c-40e7-ba4e-98708b838d74">
+
+#### At 60:
+##### Top:
+<img width="508" alt="2 c" src="https://github.com/user-attachments/assets/2783c579-8756-415e-80e0-29d52a1eca53">
+
+##### Bottom:
+<img width="508" alt="2 d" src="https://github.com/user-attachments/assets/49b50e20-6fb1-4f04-9dd4-74d283d201cf">
+
+### Insights:
++ All the top and bottom countries showed an overall increase in life expectancy, with only a slight decline observed in the last two years for both groups.
+
++ The increase in life expectancy at birth for the top countries is **0.22 years**, while for the bottom countries, it's **0.49 years**. Similarly, the increase in life expectancy at age 60 is **0.16 years** for the top countries and **0.09 years** for the bottom countries.
+
++ It is evident that the top countries experienced a smaller increase in life expectancy at birth compared to the bottom countries. However, the opposite trend is observed for life expectancy at age 60, where the top countries saw a greater increase than the bottom countries.
+
+### What is the difference in life expectancy between men and women at birth and at age 60? How has this difference changed over the years?
 
 
 
