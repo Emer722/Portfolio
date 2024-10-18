@@ -64,17 +64,17 @@ In this analysis, I used Python to calculate the median increase in life expecta
 
 #### At birth:
 ##### Top:
-<img width="508" alt="2-a" src="https://github.com/user-attachments/assets/cdf1d1af-a5b1-4e90-be08-33f99d60abff">
+<img width="600" alt="2-a" src="https://github.com/user-attachments/assets/cdf1d1af-a5b1-4e90-be08-33f99d60abff">
 
 ##### Bottom:
-<img width="510" alt="2 b" src="https://github.com/user-attachments/assets/29e7ef5f-ab8c-40e7-ba4e-98708b838d74">
+<img width="600" alt="2 b" src="https://github.com/user-attachments/assets/29e7ef5f-ab8c-40e7-ba4e-98708b838d74">
 
 #### At 60:
 ##### Top:
-<img width="508" alt="2 c" src="https://github.com/user-attachments/assets/2783c579-8756-415e-80e0-29d52a1eca53">
+<img width="600" alt="2 c" src="https://github.com/user-attachments/assets/2783c579-8756-415e-80e0-29d52a1eca53">
 
 ##### Bottom:
-<img width="508" alt="2 d" src="https://github.com/user-attachments/assets/49b50e20-6fb1-4f04-9dd4-74d283d201cf">
+<img width="600" alt="2 d" src="https://github.com/user-attachments/assets/49b50e20-6fb1-4f04-9dd4-74d283d201cf">
 
 ### Insights:
 + All the top and bottom countries showed an overall increase in life expectancy, with only a slight decline observed in the last two years for both groups.
@@ -90,17 +90,17 @@ In this analysis, I used Python to perform all the necessary calculations and Po
 
 #### At birth:
 ##### Top:
-<img width="563" alt="3 a" src="https://github.com/user-attachments/assets/597c8f39-9b56-4682-a4db-ed5c37322fd6">
+<img width="800" alt="3 a" src="https://github.com/user-attachments/assets/597c8f39-9b56-4682-a4db-ed5c37322fd6">
 
 ##### Bottom:
-<img width="565" alt="3 b" src="https://github.com/user-attachments/assets/c21accdd-b194-4ed0-8934-62d31580a8a3">
+<img width="800" alt="3 b" src="https://github.com/user-attachments/assets/c21accdd-b194-4ed0-8934-62d31580a8a3">
 
 #### At 60:
 ##### Top:
-<img width="569" alt="3 c" src="https://github.com/user-attachments/assets/cef13b2f-6b13-4557-94e3-5b5c21150f6d">
+<img width="800" alt="3 c" src="https://github.com/user-attachments/assets/cef13b2f-6b13-4557-94e3-5b5c21150f6d">
 
 ##### Bottom:
-<img width="566" alt="3 d" src="https://github.com/user-attachments/assets/b4f38afa-c504-402d-9cbb-811aa5231534">
+<img width="800" alt="3 d" src="https://github.com/user-attachments/assets/b4f38afa-c504-402d-9cbb-811aa5231534">
 
 ### Insights:
 + In every category, females have a higher life expectancy than males in both the top and bottom countries. The median difference is **3.66 years** for the top countries and **3 years** for the bottom countries across both categories.
@@ -116,38 +116,38 @@ In this analysis, I collected factors such as access to basic drinking water, ob
 
 #### Basic drinking water(%):
 ##### Top:
-  <img src="https://github.com/user-attachments/assets/60afee69-081d-4a28-967d-970fadf2f5ac" alt="Image 2" width="900"/>
+  <img src="https://github.com/user-attachments/assets/60afee69-081d-4a28-967d-970fadf2f5ac" alt="Image 2" width="1000"/>
 </p>
 
 ##### Bottom: 
-  <img src="https://github.com/user-attachments/assets/d96fcd4f-7e4e-4179-bef0-d5619dfa74c0" alt="Image 2" width="900"/>
+  <img src="https://github.com/user-attachments/assets/d96fcd4f-7e4e-4179-bef0-d5619dfa74c0" alt="Image 2" width="1000"/>
 </p>
 
 #### Obesity in adults(%):
 ##### Top:
-   <img src="https://github.com/user-attachments/assets/eae96c25-6220-469a-9cde-3adc96fa0347" alt="Image 2" width="900"/>
+   <img src="https://github.com/user-attachments/assets/eae96c25-6220-469a-9cde-3adc96fa0347" alt="Image 2" width="1000"/>
 </p>
 
 ##### Bottom:
-   <img src="https://github.com/user-attachments/assets/f96bcb00-193d-4f6b-aa93-69af067e9997" alt="Image 2" width="900"/>
+   <img src="https://github.com/user-attachments/assets/f96bcb00-193d-4f6b-aa93-69af067e9997" alt="Image 2" width="1000"/>
 </p>
 
 #### Avg. Protein Supply(g/cap/d):
 ##### Top:
-<img src="https://github.com/user-attachments/assets/f463c829-3075-4f18-acba-9ff854cb054e" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/f463c829-3075-4f18-acba-9ff854cb054e" alt="Image 2" width="1000"/>
 </p>
 
 ##### Bottom:
-<img src="https://github.com/user-attachments/assets/ee0dbfd1-bda2-4081-8739-fe0b2638a9f9" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/ee0dbfd1-bda2-4081-8739-fe0b2638a9f9" alt="Image 2" width="1000"/>
 </p>
 
 #### Min. Dietary Energy Requirement(kcal/cap/d):
 ##### Top:
-<img src="https://github.com/user-attachments/assets/55c58871-9024-48fd-a43e-373be1ae17b1" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/55c58871-9024-48fd-a43e-373be1ae17b1" alt="Image 2" width="1000"/>
 </p>
 
 ##### Bottom:
-<img src="https://github.com/user-attachments/assets/ecb1f81a-8ce6-48b3-9089-4ac4d634454b" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/ecb1f81a-8ce6-48b3-9089-4ac4d634454b" alt="Image 2" width="1000"/>
 </p>
 
 ### Insights:
@@ -170,54 +170,54 @@ I used Python to clean and organize the data by various factors, such as categor
 #### Communicable Diseases:
 ##### Top:
 ###### Category(%):
-<img src="https://github.com/user-attachments/assets/3667bc07-6e4a-4a93-9359-0741c494f897" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/3667bc07-6e4a-4a93-9359-0741c494f897" alt="Image 2" width="1000"/>
 </p>
 
 ###### Sub-Category(%):
-<img width="400" alt="5 a a" src="https://github.com/user-attachments/assets/947c68b7-f3e0-4f10-b514-1966bdea8b4b">
+<img width="700" alt="5 a a" src="https://github.com/user-attachments/assets/947c68b7-f3e0-4f10-b514-1966bdea8b4b">
 
 ##### Bottom:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/4f3330b4-4278-4cf0-bc11-600ae63634c3" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/4f3330b4-4278-4cf0-bc11-600ae63634c3" alt="Image 2" width="1000"/>
 </p>
 
 ###### Sub-Category:
-<img width="365" alt="5 bb" src="https://github.com/user-attachments/assets/39d37172-4451-418f-bc5e-ffc1e1f329d2">
+<img width="700" alt="5 bb" src="https://github.com/user-attachments/assets/39d37172-4451-418f-bc5e-ffc1e1f329d2">
 
 
 #### Injuries:
 ##### Top:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/0fcb4bb5-771c-4fdf-8db3-3487575ab6e0" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/0fcb4bb5-771c-4fdf-8db3-3487575ab6e0" alt="Image 2" width="1000"/>
 </p>
 
 ###### Sub-Category:
-<img width="366" alt="5 cc" src="https://github.com/user-attachments/assets/d7ab26ca-08c7-41b8-a64a-f9cac2dd0daf">
+<img width="700" alt="5 cc" src="https://github.com/user-attachments/assets/d7ab26ca-08c7-41b8-a64a-f9cac2dd0daf">
 
 ##### Bottom:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/c21901a6-2aa4-4efe-a89b-8f9a8af9a73e" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/c21901a6-2aa4-4efe-a89b-8f9a8af9a73e" alt="Image 2" width="1000"/>
 </p>
 
 ###### Sub-Category:
-<img width="370" alt="5 dd" src="https://github.com/user-attachments/assets/98eca4c4-a866-4c32-98b3-95537a5c6f6e">
+<img width="700" alt="5 dd" src="https://github.com/user-attachments/assets/98eca4c4-a866-4c32-98b3-95537a5c6f6e">
 
 #### Noncommunicable Diseases:
 ##### Top:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/2d452931-11ed-4fc2-9ad4-65bc39115f0c" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/2d452931-11ed-4fc2-9ad4-65bc39115f0c" alt="Image 2" width="1000"/>
 </p>
 
 ###### Sub-Category:
-<img width="366" alt="5 ee" src="https://github.com/user-attachments/assets/901e47bc-8412-4fae-aa96-632e704d7f73">
+<img width="700" alt="5 ee" src="https://github.com/user-attachments/assets/901e47bc-8412-4fae-aa96-632e704d7f73">
 
 ##### Bottom:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/0e71e820-532b-4ce1-81ae-a3dec0ed46cc" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/0e71e820-532b-4ce1-81ae-a3dec0ed46cc" alt="Image 2" width="1000"/>
 </p>
 
 ###### Sub-Category:
-<img width="367" alt="5 ff" src="https://github.com/user-attachments/assets/dff9bf0c-2860-44e0-b2b9-5674d7e714aa">
+<img width="700" alt="5 ff" src="https://github.com/user-attachments/assets/dff9bf0c-2860-44e0-b2b9-5674d7e714aa">
 
 ### Insights:
 + In the communicable diseases category, the top countries show significantly lower rates compared to the bottom countries. The injury category displays similar levels for both groups. However, a large disparity is observed in the noncommunicable diseases category, with the top countries having much higher rates. Specifically, there is a **35.99%** difference favoring the bottom countries in communicable diseases, while noncommunicable diseases show a **32.06%** higher rate in the top countries.
