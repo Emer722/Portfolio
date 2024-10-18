@@ -178,7 +178,7 @@ I used Python to clean and organize the data by various factors, such as categor
 
 ##### Bottom:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/21d7089d-b27c-4a64-bebf-e8e0e64d8ae4" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/4f3330b4-4278-4cf0-bc11-600ae63634c3" alt="Image 2" width="900"/>
 </p>
 
 ###### Sub-Category:
@@ -188,7 +188,7 @@ I used Python to clean and organize the data by various factors, such as categor
 #### Injuries:
 ##### Top:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/9a2c7503-38a0-4654-9a34-d7139dcf6cbe" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/0fcb4bb5-771c-4fdf-8db3-3487575ab6e0" alt="Image 2" width="900"/>
 </p>
 
 ###### Sub-Category:
@@ -196,7 +196,7 @@ I used Python to clean and organize the data by various factors, such as categor
 
 ##### Bottom:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/2d85ddfe-acfc-4113-92e7-58d08610ed1a" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/c21901a6-2aa4-4efe-a89b-8f9a8af9a73e" alt="Image 2" width="900"/>
 </p>
 
 ###### Sub-Category:
@@ -213,7 +213,7 @@ I used Python to clean and organize the data by various factors, such as categor
 
 ##### Bottom:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/9b23b3b7-ba2c-41e0-8fed-a20ddaabfb19" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/0e71e820-532b-4ce1-81ae-a3dec0ed46cc" alt="Image 2" width="900"/>
 </p>
 
 ###### Sub-Category:
