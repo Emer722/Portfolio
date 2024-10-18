@@ -169,11 +169,11 @@ I used Python to clean and organize the data by various factors, such as categor
 ### Results:
 #### Communicable Diseases:
 ##### Top:
-###### Category:
+###### Category(%):
 <img src="https://github.com/user-attachments/assets/3667bc07-6e4a-4a93-9359-0741c494f897" alt="Image 2" width="900"/>
 </p>
 
-###### Sub-Category:
+###### Sub-Category(%):
 <img width="400" alt="5 a a" src="https://github.com/user-attachments/assets/947c68b7-f3e0-4f10-b514-1966bdea8b4b">
 
 ##### Bottom:
@@ -220,6 +220,6 @@ I used Python to clean and organize the data by various factors, such as categor
 <img width="367" alt="5 ff" src="https://github.com/user-attachments/assets/dff9bf0c-2860-44e0-b2b9-5674d7e714aa">
 
 ### Insights:
-+ 
++ In the communicable diseases category, the top countries show significantly lower rates compared to the bottom countries. The injury category displays similar levels for both groups. However, a large disparity is observed in the noncommunicable diseases category, with the top countries having much higher rates. Specifically, there is a **35.99%** difference favoring the bottom countries in communicable diseases, while noncommunicable diseases show a **32.06%** higher rate in the top countries.
 
 
