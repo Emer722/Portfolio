@@ -167,7 +167,57 @@ The dataset is categorized into three main groups: communicable diseases, noncom
 I used Python to clean and organize the data by various factors, such as category, subcategory, death cause, gender, and top or bottom countries. After processing and organizing the data, I utilized Power BI to visualize and present the insights.
 
 ### Results:
+#### Communicable Diseases:
+##### Top:
+###### Category:
+<img src="https://github.com/user-attachments/assets/3667bc07-6e4a-4a93-9359-0741c494f897" alt="Image 2" width="900"/>
+</p>
 
+###### Sub-Category:
+<img width="400" alt="5 a a" src="https://github.com/user-attachments/assets/947c68b7-f3e0-4f10-b514-1966bdea8b4b">
+
+##### Bottom:
+###### Category:
+<img src="https://github.com/user-attachments/assets/21d7089d-b27c-4a64-bebf-e8e0e64d8ae4" alt="Image 2" width="900"/>
+</p>
+
+###### Sub-Category:
+<img width="365" alt="5 bb" src="https://github.com/user-attachments/assets/39d37172-4451-418f-bc5e-ffc1e1f329d2">
+
+
+#### Injuries:
+##### Top:
+###### Category:
+<img src="https://github.com/user-attachments/assets/2d452931-11ed-4fc2-9ad4-65bc39115f0c" alt="Image 2" width="900"/>
+</p>
+
+###### Sub-Category:
+<img width="366" alt="5 cc" src="https://github.com/user-attachments/assets/d7ab26ca-08c7-41b8-a64a-f9cac2dd0daf">
+
+##### Bottom:
+###### Category:
+<img src="https://github.com/user-attachments/assets/2d85ddfe-acfc-4113-92e7-58d08610ed1a" alt="Image 2" width="900"/>
+</p>
+
+###### Sub-Category:
+<img width="370" alt="5 dd" src="https://github.com/user-attachments/assets/98eca4c4-a866-4c32-98b3-95537a5c6f6e">
+
+#### Noncommunicable Diseases:
+##### Top:
+###### Category:
+<img src="https://github.com/user-attachments/assets/9a2c7503-38a0-4654-9a34-d7139dcf6cbe" alt="Image 2" width="900"/>
+</p>
+
+###### Sub-Category:
+<img width="366" alt="5 ee" src="https://github.com/user-attachments/assets/901e47bc-8412-4fae-aa96-632e704d7f73">
+
+##### Bottom:
+###### Category:
+<img src="https://github.com/user-attachments/assets/9b23b3b7-ba2c-41e0-8fed-a20ddaabfb19" alt="Image 2" width="900"/>
+</p>
+
+###### Sub-Category:
+<img width="367" alt="5 ff" src="https://github.com/user-attachments/assets/dff9bf0c-2860-44e0-b2b9-5674d7e714aa">
 
 
 
