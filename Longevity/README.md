@@ -188,7 +188,7 @@ I used Python to clean and organize the data by various factors, such as categor
 #### Injuries:
 ##### Top:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/2d452931-11ed-4fc2-9ad4-65bc39115f0c" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/9a2c7503-38a0-4654-9a34-d7139dcf6cbe" alt="Image 2" width="900"/>
 </p>
 
 ###### Sub-Category:
@@ -205,7 +205,7 @@ I used Python to clean and organize the data by various factors, such as categor
 #### Noncommunicable Diseases:
 ##### Top:
 ###### Category:
-<img src="https://github.com/user-attachments/assets/9a2c7503-38a0-4654-9a34-d7139dcf6cbe" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/2d452931-11ed-4fc2-9ad4-65bc39115f0c" alt="Image 2" width="900"/>
 </p>
 
 ###### Sub-Category:
@@ -219,6 +219,7 @@ I used Python to clean and organize the data by various factors, such as categor
 ###### Sub-Category:
 <img width="367" alt="5 ff" src="https://github.com/user-attachments/assets/dff9bf0c-2860-44e0-b2b9-5674d7e714aa">
 
-
+### Insights:
++ 
 
 
