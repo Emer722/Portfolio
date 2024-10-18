@@ -134,7 +134,7 @@ In this analysis, I collected factors such as access to basic drinking water, ob
 
 #### Avg. Protein Supply(g/cap/d):
 ##### Top:
-   <img width="496" alt="4 e" src="https://github.com/userattachments/assets/f463c829-3075-4f18-acba-9ff854cb054e" alt="Image 2" width="900"/>
+<img src="https://github.com/user-attachments/assets/f463c829-3075-4f18-acba-9ff854cb054e" alt="Image 2" width="900"/>
 </p>
 
 ##### Bottom:
@@ -152,11 +152,21 @@ In this analysis, I collected factors such as access to basic drinking water, ob
 
 ### Insights:
 
++ First of all, the top countries outperform in all areas except for obesity, where they face a disadvantage compared to other factors.
 
++ This disparity could impact longevity, as obesity-related diseases often emerge later in life, typically in one's 50s or 60s. In contrast, for the bottom countries, obesity is less prevalent, likely due to nutritional deficiencies, which may contribute to shorter life spans.
 
++ There is a **35.5%** difference in access to basic drinking water between the top and bottom countries. The difference in obesity rates is **13.08%**. In terms of average protein supply, there is a gap of **36.9** grams per capita per day, and for minimum dietary energy requirements, the difference is **183.25** kcal per capita per day.
 
+How do the top and bottom countries differ across each category and subcategory of death causes?
 
+### How do the top and bottom countries differ across each category and subcategory of death causes?
 
+The dataset is categorized into three main groups: communicable diseases, noncommunicable diseases, and injuries. Each category is further divided into subcategories, providing more detailed information about specific death causes.
+
+I used Python to clean and organize the data by various factors, such as category, subcategory, death cause, gender, and top or bottom countries. After processing and organizing the data, I utilized Power BI to visualize and present the insights.
+
+### Results:
 
 
 
