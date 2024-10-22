@@ -222,4 +222,10 @@ I used Python to clean and organize the data by various factors, such as categor
 ### Insights:
 + In the communicable diseases category, the top countries show significantly lower rates compared to the bottom countries. The injury category displays similar levels for both groups. However, a large disparity is observed in the noncommunicable diseases category, with the top countries having much higher rates. Specifically, there is a **35.99%** difference favoring the bottom countries in communicable diseases, while noncommunicable diseases show a **32.06%** higher rate in the top countries.
 
++ In the subcategory of communicable diseases, there is a notable contrast between the top and bottom countries. Neonatal conditions are not prevalent in either group. However, in the bottom countries, infectious and parasitic diseases account for **74.87%** of deaths, which is **20.17%** higher than in the top countries. Conversely, in the top countries, respiratory infections are the leading cause of death, making up **43.38%** of deaths, a **20.28%** difference compared to the bottom countries.
+
++ In the injury category, there is no significant difference between the top and bottom countries. However, in both groups, unintentional injuries are the leading cause of death, surpassing intentional injuries.
+
++ The non-communicable diseases category includes a wider range of subcategories, but the key differences between the top and bottom countries lie in the prevalence of malignant neoplasms (cancers) and cardiovascular diseases. In the top countries, malignant neoplasms account for nearly **50%** of deaths in this category, while cardiovascular diseases make up **30%**. In contrast, in the bottom countries, malignant neoplasms represent **27.43%** of deaths, cardiovascular diseases **38.79%**, and digestive diseases stand out with **11%**. These are the most prominent causes of death in each group.
+
 
