@@ -232,4 +232,4 @@ I used Python to clean and organize the data by various factors, such as categor
 
 + In the top countries, cancer is more prevalent than in the bottom countries, largely because cancer risk increases with age. Since these top countries generally have higher life expectancy, cancers are more frequently observed as the leading cause of death within the non-communicable diseases category. In contrast, cardiovascular diseases dominate this category in the bottom countries, primarily due to factors such as poor diet, physical inactivity, and smoking, which can negatively impact health at a younger age. Similarly, digestive diseases also contribute significantly to mortality in these lower-income countries.
 
-
+### How do different causes of death impact life expectancy at age 60 in the top and bottom countries?
