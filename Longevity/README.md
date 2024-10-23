@@ -174,7 +174,7 @@ I used Python to clean and organize the data by various factors, such as categor
 </p>
 
 ###### Sub-Category(%):
-<img width="700" alt="5 a a" src="https://github.com/user-attachments/assets/947c68b7-f3e0-4f10-b514-1966bdea8b4b">
+<img width="700" alt="5 cc" src="https://github.com/user-attachments/assets/95117357-a6df-4f10-9359-393674db8b3a">
 
 ##### Bottom:
 ###### Category:
@@ -182,8 +182,7 @@ I used Python to clean and organize the data by various factors, such as categor
 </p>
 
 ###### Sub-Category:
-<img width="700" alt="5 bb" src="https://github.com/user-attachments/assets/39d37172-4451-418f-bc5e-ffc1e1f329d2">
-
+<img width="700" alt="5 bb" src="https://github.com/user-attachments/assets/8d8c94a7-ffb9-426b-ad9d-1037948dca9b">
 
 #### Injuries:
 ##### Top:
@@ -192,7 +191,7 @@ I used Python to clean and organize the data by various factors, such as categor
 </p>
 
 ###### Sub-Category:
-<img width="700" alt="5 cc" src="https://github.com/user-attachments/assets/d7ab26ca-08c7-41b8-a64a-f9cac2dd0daf">
+<img width="700" alt="5 cc" src="https://github.com/user-attachments/assets/e9dbedce-651a-46e4-9df0-041794cf70fd">
 
 ##### Bottom:
 ###### Category:
@@ -200,7 +199,7 @@ I used Python to clean and organize the data by various factors, such as categor
 </p>
 
 ###### Sub-Category:
-<img width="700" alt="5 dd" src="https://github.com/user-attachments/assets/98eca4c4-a866-4c32-98b3-95537a5c6f6e">
+<img width="700" alt="5 dd" src="https://github.com/user-attachments/assets/dd81a0f6-ad71-48b4-bc9c-42cefac372b4">
 
 #### Noncommunicable Diseases:
 ##### Top:
@@ -209,7 +208,7 @@ I used Python to clean and organize the data by various factors, such as categor
 </p>
 
 ###### Sub-Category:
-<img width="700" alt="5 ee" src="https://github.com/user-attachments/assets/901e47bc-8412-4fae-aa96-632e704d7f73">
+<img width="700" alt="5 ee" src="https://github.com/user-attachments/assets/4a9475e3-f790-4b33-b363-00925d56b3c8">
 
 ##### Bottom:
 ###### Category:
@@ -217,16 +216,16 @@ I used Python to clean and organize the data by various factors, such as categor
 </p>
 
 ###### Sub-Category:
-<img width="700" alt="5 ff" src="https://github.com/user-attachments/assets/dff9bf0c-2860-44e0-b2b9-5674d7e714aa">
+<img width="700" alt="5 ff" src="https://github.com/user-attachments/assets/6fc7ca83-089e-4bc2-ab92-081ac68438dc">
 
 ### Insights:
 + In the communicable diseases category, the top countries show significantly lower rates compared to the bottom countries. The injury category displays similar levels for both groups. However, a large disparity is observed in the noncommunicable diseases category, with the top countries having much higher rates. Specifically, there is a **35.99%** difference favoring the bottom countries in communicable diseases, while noncommunicable diseases show a **32.06%** higher rate in the top countries.
 
-+ In the subcategory of communicable diseases, there is a notable contrast between the top and bottom countries. Neonatal conditions are not prevalent in either group. However, in the bottom countries, infectious and parasitic diseases account for **74.87%** of deaths, which is **20.17%** higher than in the top countries. Conversely, in the top countries, respiratory infections are the leading cause of death, making up **43.38%** of deaths, a **20.28%** difference compared to the bottom countries.
++ In the subcategory of communicable diseases, there is a notable contrast between the top and bottom countries. Neonatal conditions are not prevalent in either group. However, in the bottom countries, **Infectious and parasitic diseases** account for **82.17%** of deaths, which is **28.17%** higher than in the top countries. Conversely, in the top countries, the distribution is more balanced, with **infectious and parasitic diseases** accounting for **54%**, while **respiratory infections** make up **44.55%**.
 
 + In the injury category, there is no significant difference between the top and bottom countries. However, in both groups, unintentional injuries are the leading cause of death, surpassing intentional injuries.
 
-+ The non-communicable diseases category includes a wider range of subcategories, but the key differences between the top and bottom countries lie in the prevalence of malignant neoplasms (cancers) and cardiovascular diseases. In the top countries, malignant neoplasms account for nearly **50%** of deaths in this category, while cardiovascular diseases make up **30%**. In contrast, in the bottom countries, malignant neoplasms represent **27.43%** of deaths, cardiovascular diseases **38.79%**, and digestive diseases stand out with **11%**. These are the most prominent causes of death in each group.
++ The non-communicable diseases category includes a wider range of subcategories, but the key differences between the top and bottom countries lie in the prevalence of **malignant neoplasms (cancers)** and **cardiovascular diseases**. In the top countries, malignant neoplasms account for nearly **50%** of deaths in this category, while cardiovascular diseases make up **29.12%**. In contrast, in the bottom countries, malignant neoplasms represent **29.22%** of deaths, cardiovascular diseases **36.11%**, and digestive diseases stand out with **13.32%**. These are the most prominent causes of death in each group.
 
 + For the communicable diseases category, I concluded that the higher prevalence of infectious and parasitic diseases in the bottom countries is strongly linked to poor hygiene, limited access to clean water, and inadequate sanitation. Since these countries face significant challenges in accessing clean water and maintaining proper sanitation, they experience a higher burden of these diseases. In contrast, the top countries, with better sanitation and water access, have a lower incidence of infectious and parasitic diseases.
 
@@ -235,39 +234,50 @@ I used Python to clean and organize the data by various factors, such as categor
 ### How do different causes of death impact life expectancy at age 60 in the top and bottom countries?
 In this section, I focused on analyzing the impact of different types of death causes on longevity for individuals aged 60, by examining data for ages 5 to 59. I delved into greater detail, beyond the subcategories, to explore specific death causes. Python was used for data cleaning and analysis, while Power BI was employed for visualization.
 
+The percentage corresponds to each specific category; for instance, in the communicable diseases category, HIV/AIDS accounts for **30.36%** of the total deaths within that category, and similar logic applies to other diseases.
+
 ### Results:
-First, I will present every death cause within each category. However, for categories with an extensive number of causes, such as noncommunicable diseases, I will focus on showing the most significant death causes within the leading subcategory.
 
 #### Communicable Diseases:
 ##### Top:
-<img src="https://github.com/user-attachments/assets/b21d20de-3bdc-4b0b-b510-bbd7900ce172" alt="Image 2" width="700"/>
+<img src="https://github.com/user-attachments/assets/51c3d257-8d06-47ad-82ae-32e06e099cb3" alt="Image 2" width="700"/>
 </p>
 
 ##### Bottom:
-<img src="https://github.com/user-attachments/assets/0b09ca19-6362-4d07-afd4-37fcbbcf2c48" alt="Image 2" width="700"/>
+<img src="https://github.com/user-attachments/assets/e5959d98-b28a-4c0a-8ac9-bd3029d76d6b" alt="Image 2" width="700"/>
 </p>
 
 #### Injuries:
 ##### Top:
-<img src="https://github.com/user-attachments/assets/c070f338-eda0-4ec5-bcd5-0feb7429ac35" alt="Image 2" width="700"/>
+<img src="https://github.com/user-attachments/assets/77ca0c30-2a69-453f-917b-3f011214d5f3" alt="Image 2" width="700"/>
 </p>
 
 ##### Bottom:
-<img src="https://github.com/user-attachments/assets/1099469c-1bb2-4c08-a209-f2b58e61e99e" alt="Image 2" width="700"/>
+<img src="https://github.com/user-attachments/assets/97513900-0b64-472f-b642-605e376619fd" alt="Image 2" width="700"/>
 </p>
 
 #### Noncommunicable Diseases:
 ##### Top:
-<img src="https://github.com/user-attachments/assets/a3ce15c8-2202-423e-a072-2a1d2a43964b" alt="Image 2" width="700"/>
+<img src="https://github.com/user-attachments/assets/7e462ff8-a3ee-45ba-838f-6358e3e44059" alt="Image 2" width="700"/>
 </p>
 
 ##### Bottom:
-<img src="https://github.com/user-attachments/assets/8099e94b-c2c9-4c85-8048-d5b5568f7c6b" alt="Image 2" width="700"/>
+<img src="https://github.com/user-attachments/assets/b14b882b-5cd5-4385-b10a-b22945e09f79" alt="Image 2" width="700"/>
 </p>
 
 ### Insights:
-+ In the Communicable category, the top three leading causes of death for both the top and bottom countries are lower respiratory infections, protein-energy malnutrition, and HIV/AIDS. In the top countries, **lower respiratory infections** account for **24.74%** of deaths, **protein-energy malnutrition** for **16.14%**, and **HIV/AIDS** for **10.83%**. In the bottom countries, these causes are more pronounced, with **lower respiratory infections** at **27.53%**, **protein-energy malnutrition** at **29.02%**, and **HIV/AIDS** at **11.44%**.
++ For the top countries, the three leading death causes in the communicable category are **lower respiratory infections** at **44.24%**, **HIV/AIDS** at **18.88%**, and **other infectious diseases** at **17.58%**. In contrast, for the bottom countries, the leading death causes are **HIV/AIDS** at **30.36%**, **tuberculosis** at **25.23%**, and **lower respiratory infections** at **18%**.
 
-+ In the Injury category, both the top and bottom countries exhibit similar percentages for the leading causes of death. The top three causes are self-harm, road injury, and interpersonal violence. In the top countries, **self-harm** leads with **31.74%**, followed by **road injury** at **26.54%** and **interpersonal violence** at **17.33%**. In the bottom countries, **interpersonal violence** is the leading cause at **24.43%**, followed by **road injury** at **23.81%**, and **self-harm** at **20.57%**.
++ In the **Injury category**, for the top countries, the leading death causes are **road injury** at **36%**, **self-harm** at **25.73%**, **other unintentional injuries** at **13%**, and **interpersonal violence** at **10.55%**. For the bottom countries, the leading causes are **road injury** at **35.72%**, **interpersonal violence** at **16.46%**, **other unintentional injuries** at **13%**, and **self-harm** at **12.27%**.
 
-+ 
++ In the **noncommunicable category**, the percentage differences between death causes are not as pronounced as in previous categories, but certain causes still stand out. For the top countries, the leading causes of death are **Ischaemic heart disease** at **18.61%**, **Trachea, bronchus, and lung cancers** at **7%**, **breast cancer** at **6.63%**, **stroke** at **5%**, and **colon and rectum cancers** at **4.90%**.
+
++ In contrast, for the bottom countries, the leading causes of death are **stroke** at **17.5%**, **Ischaemic heart disease** at **12.57%**, **cirrhosis of the liver** at **6%**, and **kidney diseases** at **5.45%**. While these percentages may seem small, it's important to note that this category includes a wide variety of death causes, so even **5%** represents a significant portion of the total deaths.
+
++ In the **top countries**, deaths from Communicable diseases are relatively low compared to the **bottom countries**. However, **Lower respiratory infections** remain a significant public health concern, being the primary cause of death within this category. In contrast, in the **bottom countries**, **HIV/AIDS** and **Tuberculosis** are the leading causes of death. Limited access to proper treatment and healthcare in these regions significantly affects life expectancy, as these diseases continue to have a major impact on public health.
+
++ In the **Injury** category, the main difference between the top and bottom countries lies in the leading causes of death. In the top countries, **self-harm** accounts for a higher number of deaths compared to the bottom countries. Conversely, in the bottom countries, **interpersonal violence** leads to more deaths than in the top countries.
+
++ In the **Noncommunicable category**, the leading causes of death in top countries are predominantly related to **cancer**, supporting my previous conclusion that these factors contribute to prolonged longevity. In contrast, the bottom countries experience higher mortality rates from **stroke**, **cirrhosis of the liver**, and **kidney diseases**, which negatively impact longevity.
+
+###  What are the leading causes of death in each category for both the top and bottom countries?
