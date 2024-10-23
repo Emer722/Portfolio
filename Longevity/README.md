@@ -18,8 +18,7 @@ This project stems from my interest in understanding health and longevity. I gat
 
 6.  How do different causes of death impact life expectancy at age 60 in the top and bottom countries?
 
-7.  What are the leading causes of death in each category for the top 10 and bottom 10 countries, and how do these causes compare in terms of prevalence and impact on longevity?
-
+7.   What are the leading causes of death in each category for the top 10 and bottom 10 countries?
 # Tools I Used:
 
 1. Pandas Library: This was used to analyze, clean, and manipulate the data.
@@ -280,7 +279,7 @@ The percentage corresponds to each specific category; for instance, in the commu
 
 + In the **Noncommunicable category**, the leading causes of death in top countries are predominantly related to **cancer**, supporting my previous conclusion that these factors contribute to prolonged longevity. In contrast, the bottom countries experience higher mortality rates from **stroke**, **cirrhosis of the liver**, and **kidney diseases**, which negatively impact longevity.
 
-###  What are the leading causes of death in each category for the top 10 and bottom 10 countries, and how do these causes compare in terms of prevalence and impact on longevity?
+###  What are the leading causes of death in each category for the top 10 and bottom 10 countries?
 In this analysis, I aim to achieve greater precision by minimizing the influence of significant outliers. I will identify the leading causes of death within each sub-category and category. For this purpose, I utilized Python for data cleaning and DataFrame construction, while leveraging Power BI for visualization.
 
 ### Results:
@@ -307,5 +306,12 @@ In the graphs presented below, the x-axis displays the causes of death, while th
 ##### Bottom:
 <img width="1000" alt="nb_" src="https://github.com/user-attachments/assets/04e9237a-614b-451f-9f74-1f602d22aa9f">
 
+### Insights:
++ In the Communicable category, the leading diseases for the top countries show minimal variation in their values, with **HIV/AIDS** not ranking as the primary cause in the **infectious and parasitic diseases** sub-category. In contrast, for the bottom countries, **lower respiratory infections** emerge as the leading cause in the **respiratory infectious** sub-category, while **HIV/AIDS** and **Tuberculosis** dominate the **infectious and parasitic diseases** sub-category.
 
++ In the Injury category, the top countries see **self-harm** rise to account for **50%** of the deaths, making it the leading cause, surpassing **road injury**. Similarly, in the bottom countries, **self-harm** also emerges as the primary cause within the **intentional injuries** sub-category, displacing **interpersonal violence** from its leading position.
+
++ In the noncommunicable category, there is little change among the top countries compared to the previous analysis. However, for the bottom countries, **ischaemic heart disease** has emerged as the leading cause of death, replacing **stroke**, while the remaining causes remain largely consistent.
+
++ I conclude that the top 10 countries continue to experience significant issues with suicide, likely due to high levels of pressure in their competitive environments. In the noncommunicable category, the leading causes of death remain consistent, with **cancer** and **heart problems** contributing to prolonged longevity. Conversely, in the bottom 10 countries, **HIV/AIDS** is a leading cause of death, often attributed to a lack of education regarding sexual health. Additionally, there is a lower prevalence of cancer-related diseases in these countries, which can be linked to limited access to healthcare facilities. Consequently, many individuals do not receive timely treatment, preventing them from reaching advanced stages of cancer, which shortened the longevity.
 
