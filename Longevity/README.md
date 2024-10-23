@@ -18,7 +18,7 @@ This project stems from my interest in understanding health and longevity. I gat
 
 6.  How do different causes of death impact life expectancy at age 60 in the top and bottom countries?
 
-7.  What are the leading causes of death in each category for both the top and bottom countries?
+7.  What are the leading causes of death in each category for the top 10 and bottom 10 countries, and how do these causes compare in terms of prevalence and impact on longevity?
 
 # Tools I Used:
 
@@ -162,7 +162,7 @@ How do the top and bottom countries differ across each category and subcategory 
 
 ### How do the top and bottom countries differ across each category and subcategory of death causes?
 
-The dataset is categorized into three main groups: communicable diseases, noncommunicable diseases, and injuries. Each category is further divided into subcategories, providing more detailed information about specific death causes.
+The dataset is categorized into three main groups: communicable diseases, noncommunicable diseases, and injuries. Each category is further divided into subcategories, providing more detailed information about specific death causes, for all the death cause analysis is from 2000,2010,2015 and 2021(only years provided by WHO)
 
 I used Python to clean and organize the data by various factors, such as category, subcategory, death cause, gender, and top or bottom countries. After processing and organizing the data, I utilized Power BI to visualize and present the insights.
 
@@ -280,4 +280,32 @@ The percentage corresponds to each specific category; for instance, in the commu
 
 + In the **Noncommunicable category**, the leading causes of death in top countries are predominantly related to **cancer**, supporting my previous conclusion that these factors contribute to prolonged longevity. In contrast, the bottom countries experience higher mortality rates from **stroke**, **cirrhosis of the liver**, and **kidney diseases**, which negatively impact longevity.
 
-###  What are the leading causes of death in each category for both the top and bottom countries?
+###  What are the leading causes of death in each category for the top 10 and bottom 10 countries, and how do these causes compare in terms of prevalence and impact on longevity?
+In this analysis, I aim to achieve greater precision by minimizing the influence of significant outliers. I will identify the leading causes of death within each sub-category and category. For this purpose, I utilized Python for data cleaning and DataFrame construction, while leveraging Power BI for visualization.
+
+### Results:
+In the graphs presented below, the x-axis displays the causes of death, while the sub-categories are listed beneath them. The percentages represent the total death causes within each category, rather than within the sub-categories.
+
+#### Communicable Diseases:
+##### Top:
+<img width="1000" alt="ct_" src="https://github.com/user-attachments/assets/3d8e9b86-c473-4f95-938c-f49db454abb9">
+
+##### Bottom:
+<img width="1000" alt="cb_" src="https://github.com/user-attachments/assets/98c9a123-fd73-49e0-a36f-6092dc0de9d7">
+
+#### Injuries:
+##### Top:
+<img width="1000" alt="it_" src="https://github.com/user-attachments/assets/d51e3bde-87ec-47cc-9ec0-c4b2ff805490">
+
+##### Bottom:
+<img width="1000" alt="ib_" src="https://github.com/user-attachments/assets/2925f3fe-0334-45f5-9f3e-ad6c3bbd262f">
+
+#### Noncommunicable Diseases:
+##### Top:
+<img width="1000" alt="nt_" src="https://github.com/user-attachments/assets/f39aba7a-cdc7-4f5b-9c74-8236027f1bda">
+
+##### Bottom:
+<img width="1000" alt="nb_" src="https://github.com/user-attachments/assets/04e9237a-614b-451f-9f74-1f602d22aa9f">
+
+
+
