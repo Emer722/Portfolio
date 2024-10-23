@@ -86,6 +86,8 @@ In this analysis, I used Python to calculate the median increase in life expecta
 
 View my notebook with detailed steps here: [Longevity/Life expectancy.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Life%20expectancy.ipynb)
 
+Also here: [Longevity/Analysis.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Analysis.ipynb)
+
 ### What is the difference in life expectancy between men and women at birth and at age 60? How has this difference changed over the years?
 In this analysis, I used Python to perform all the necessary calculations and Power BI for data visualization.
 
@@ -113,6 +115,8 @@ In this analysis, I used Python to perform all the necessary calculations and Po
 + For females: The increase in life expectancy at birth for the top countries is **0.22 years**, while for the bottom countries, it's **0.60 years**. Similarly, the increase in life expectancy at age 60 is **0.16 years** for the top countries and **0.11 years** for the bottom countries.
 
 View my notebook with detailed steps here: [Longevity/Life expectancy.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Life%20expectancy.ipynb)
+
+Also here: [Longevity/Analysis.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Analysis.ipynb)
 
 ### How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions?
 In this analysis, I collected factors such as access to basic drinking water, obesity rates, average protein supply, and minimum dietary energy requirements from FAO to evaluate the living conditions in different countries. I used Python for the analysis and Power BI for the visualization.
@@ -326,5 +330,7 @@ In the graphs presented below, the x-axis displays the causes of death, while th
 + I conclude that the top 10 countries continue to experience significant issues with suicide, likely due to high levels of pressure in their competitive environments. In the noncommunicable category, the leading causes of death remain consistent, with **cancer** and **heart problems** contributing to prolonged longevity. Conversely, in the bottom 10 countries, **HIV/AIDS** is a leading cause of death, often attributed to a lack of education regarding sexual health. Additionally, there is a lower prevalence of cancer-related diseases in these countries, which can be linked to limited access to healthcare facilities. Consequently, many individuals do not receive timely treatment, preventing them from reaching advanced stages of cancer, which shortens their longevity.
 
 View my notebook with detailed steps here: [Longevity/Death_Cause.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Death_Cause.ipynb)
+
+Also here: [Longevity/Analysis.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Analysis.ipynb)
 
 ### Conclusion:
