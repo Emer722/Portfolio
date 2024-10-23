@@ -56,6 +56,8 @@ First, I separated the top and bottom countries by identifying the top 30% and b
 
 + The graph also highlights that **Japan** leads in both categories, with the highest life expectancy at birth and at age 60.
 
+View my notebook with detailed steps here: [Longevity/Life expectancy.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Life%20expectancy.ipynb)
+
 ### How has life expectancy at birth and at age 60 increased over the years for both genders? Are the top-ranking and bottom-ranking countries also experiencing an increase in life expectancy?
 In this analysis, I used Python to calculate the median increase in life expectancy at birth and at age 60, and utilized Power BI for the visualization.
 
