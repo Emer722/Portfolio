@@ -233,3 +233,34 @@ I used Python to clean and organize the data by various factors, such as categor
 + In the top countries, cancer is more prevalent than in the bottom countries, largely because cancer risk increases with age. Since these top countries generally have higher life expectancy, cancers are more frequently observed as the leading cause of death within the non-communicable diseases category. In contrast, cardiovascular diseases dominate this category in the bottom countries, primarily due to factors such as poor diet, physical inactivity, and smoking, which can negatively impact health at a younger age. Similarly, digestive diseases also contribute significantly to mortality in these lower-income countries.
 
 ### How do different causes of death impact life expectancy at age 60 in the top and bottom countries?
+In this section, I focused on analyzing the impact of different types of death causes on longevity for individuals aged 60, by examining data for ages 5 to 59. I delved into greater detail, beyond the subcategories, to explore specific death causes. Python was used for data cleaning and analysis, while Power BI was employed for visualization.
+
+### Results:
+First, I will present every death cause within each category. However, for categories with an extensive number of causes, such as noncommunicable diseases, I will focus on showing the most significant death causes within the leading subcategory.
+
+#### Communicable Diseases:
+##### Top:
+<img src="https://github.com/user-attachments/assets/b21d20de-3bdc-4b0b-b510-bbd7900ce172" alt="Image 2" width="700"/>
+</p>
+
+##### Bottom:
+<img src="https://github.com/user-attachments/assets/0b09ca19-6362-4d07-afd4-37fcbbcf2c48" alt="Image 2" width="700"/>
+</p>
+
+#### Injuries:
+##### Top:
+<img src="https://github.com/user-attachments/assets/c070f338-eda0-4ec5-bcd5-0feb7429ac35" alt="Image 2" width="700"/>
+</p>
+
+##### Bottom:
+<img src="https://github.com/user-attachments/assets/1099469c-1bb2-4c08-a209-f2b58e61e99e" alt="Image 2" width="700"/>
+</p>
+
+#### Noncommunicable Diseases:
+##### Top:
+<img src="https://github.com/user-attachments/assets/a3ce15c8-2202-423e-a072-2a1d2a43964b" alt="Image 2" width="700"/>
+</p>
+
+##### Bottom:
+<img src="https://github.com/user-attachments/assets/8099e94b-c2c9-4c85-8048-d5b5568f7c6b" alt="Image 2" width="700"/>
+</p>
