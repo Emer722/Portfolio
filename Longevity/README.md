@@ -264,3 +264,10 @@ First, I will present every death cause within each category. However, for categ
 ##### Bottom:
 <img src="https://github.com/user-attachments/assets/8099e94b-c2c9-4c85-8048-d5b5568f7c6b" alt="Image 2" width="700"/>
 </p>
+
+### Insights:
++ In the Communicable category, the top three leading causes of death for both the top and bottom countries are lower respiratory infections, protein-energy malnutrition, and HIV/AIDS. In the top countries, **lower respiratory infections** account for **24.74%** of deaths, **protein-energy malnutrition** for **16.14%**, and **HIV/AIDS** for **10.83%**. In the bottom countries, these causes are more pronounced, with **lower respiratory infections** at **27.53%**, **protein-energy malnutrition** at **29.02%**, and **HIV/AIDS** at **11.44%**.
+
++ In the Injury category, both the top and bottom countries exhibit similar percentages for the leading causes of death. The top three causes are self-harm, road injury, and interpersonal violence. In the top countries, **self-harm** leads with **31.74%**, followed by **road injury** at **26.54%** and **interpersonal violence** at **17.33%**. In the bottom countries, **interpersonal violence** is the leading cause at **24.43%**, followed by **road injury** at **23.81%**, and **self-harm** at **20.57%**.
+
++ 
