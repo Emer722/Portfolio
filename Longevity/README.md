@@ -120,7 +120,7 @@ View my notebook with detailed steps here: [Longevity/Life expectancy.ipynb](htt
 
 Also here: [Longevity/Analysis.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Analysis.ipynb)
 
-### How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions?
+### How do the top and bottom countries in life expectancy at birth compare in terms of food and living conditions?
 In this analysis, I collected factors such as access to basic drinking water, obesity rates, average protein supply, and minimum dietary energy requirements from FAO to evaluate the living conditions in different countries. I used Python for the analysis and Power BI for the visualization.
 
 ### Results:
