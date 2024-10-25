@@ -12,7 +12,7 @@ This project stems from my interest in understanding health and longevity. I gat
 
 3.  What is the difference in life expectancy between men and women at birth and at age 60? How has this difference changed over the years?
 
-4.  How do the top and bottom countries in life expectancy at birth and at age 60 compare in terms of food and living conditions? 
+4.  How do the top and bottom countries in life expectancy at birth compare in terms of food and living conditions? 
 
 5.  How do the top and bottom countries differ across each category and subcategory of death causes?
 
