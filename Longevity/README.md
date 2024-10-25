@@ -84,6 +84,8 @@ In this analysis, I used Python to calculate the median increase in life expecta
 
 + It is evident that the top countries experienced a smaller increase in life expectancy at birth compared to the bottom countries. However, the opposite trend is observed for life expectancy at age 60, where the top countries saw a greater increase than the bottom countries.
 
++ This is because the top countries are already developed, so life expectancy at birth shows less significant variation. However, in developing countries, improving living conditions have led to a more notable increase in life expectancy over time, but not always extending as significantly into older age groups.
+
 View my notebook with detailed steps here: [Longevity/Life expectancy.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Life%20expectancy.ipynb)
 
 Also here: [Longevity/Analysis.ipynb](https://github.com/Emer722/Portfolio/blob/main/Longevity/Analysis.ipynb)
